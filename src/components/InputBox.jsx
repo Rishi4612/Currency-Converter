@@ -28,7 +28,7 @@ function InputBox({
           placeholder="Amount"
           disabled={amountDisable}
           value={amount}
-          onAmountChange={(e) =>
+          onChange={(e) =>
             onAmountChange && onAmountChange(Number(e.target.value))
           }
         />
@@ -41,11 +41,11 @@ function InputBox({
           onChange={(e) => onCurrencyChange && onCurrencyChange(e.target.value)}
           disabled={currencyDisable}
         >
-          {currencyOption.map((currency) => {
+          {currencyOption.map((currency) => (
             <option key={currency} value={currency}>
               {currency.toUpperCase()}
-            </option>;
-          })}
+            </option>
+          ))}
         </select>
       </div>
     </div>
